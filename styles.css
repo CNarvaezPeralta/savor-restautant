@@ -1,0 +1,31 @@
+/* VARIABLES */
+:root {
+    --primary-color: #C5A059; /* Dorado para detalles y botones */
+    --bg-dark: #121212;       /* Negro para el fondo principal */
+    --text-light: #FFFFFF;    /* Blanco para textos principales */
+    --text-muted: #a7a7a7;    /* Gris para textos secundarios */
+
+    --font-title: 'serif';      /* Tipografia titulos */
+    --font-body: 'sans-serif';  /*Tipografia para el contenido */
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Clase de utilidad para centrar el contenido en la pantalla */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
