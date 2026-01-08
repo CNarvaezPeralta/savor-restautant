@@ -29,3 +29,53 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* HEADER & NAV */
+.header {
+    width: 100%;
+    background-color: var(--bg-dark);
+    position: fixed; /* Se queda arriba siempre al hacer scroll */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Para que este siempre por encima de lo demá */
+    border-bottom: 1px solid rgb(255, 255, 255, 0.05);
+}
+
+.nav {
+    height: 80px; /* Altura fija para el menú */
+    display: flex;
+    justify-content: space-between; /* Logo a un lado, hamburguesa al otro */
+    align-items: center;
+}
+
+.nav__logo {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.nav__logo span {
+    color: var(--primary-color);
+}
+
+/* Menú hamburguesa */
+.nav__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav__toggle-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: 0.3s;
+}
+
+.nav__menu {
+    display: none; /* Oculto por defecto */
+}
