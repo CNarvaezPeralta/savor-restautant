@@ -103,6 +103,57 @@ a {
     display: none; /* Oculto por defecto */
 }
 
+/* HERO SECTION */
+.hero {
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
+}
+
+.hero__container {
+    width: 100%;
+}
+
+.hero__subtitle {
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero__description {
+    margin-bottom: 2.5rem;
+    color: var(--text-muted);
+}
+
+/* Botón reutilizable */
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #b38f4d;
+    transform: translateY(-3px);
+}
+
 /* ESTILOS PARA EL MOVIL PARA CUANDO ESTE DESPLEGADO */
 @media (max-width: 768px) {
     .nav__menu {
