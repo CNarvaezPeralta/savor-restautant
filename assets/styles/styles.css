@@ -96,7 +96,7 @@ img {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+                url('../img/hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     text-align: center;
