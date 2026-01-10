@@ -1,15 +1,14 @@
-/* VARIABLES */
+/* --- 1. VARIABLES --- */
 :root {
-    --primary-color: #C5A059; /* Dorado para detalles y botones */
-    --bg-dark: #121212;       /* Negro para el fondo principal */
-    --text-light: #FFFFFF;    /* Blanco para textos principales */
-    --text-muted: #a7a7a7;    /* Gris para textos secundarios */
-
-    --font-title: 'Playfair Display';      /* Tipografia titulos */
-    --font-body: 'Poppins';  /*Tipografia para el contenido */
+    --primary-color: #C5A059; 
+    --bg-dark: #121212;       
+    --text-light: #FFFFFF;    
+    --text-muted: #a7a7a7;    
+    --font-title: 'Playfair Display', serif;      
+    --font-body: 'Poppins', sans-serif;  
 }
 
-/* RESET */
+/* --- 2. RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -21,69 +20,62 @@ body {
     color: var(--text-light);
     font-family: var(--font-body);
     line-height: 1.6;
+    overflow-x: hidden; /* EVITA EL SCROLL LATERAL */
 }
 
-/* Añade esto a tus estilos generales */
-ul {
-    list-style: none; /* Quita los puntos negros de todas las listas */
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+img {
+    max-width: 100%; /* LA IMAGEN NO SE SALE DE SU CAJA */
+    height: auto;
+    display: block;
 }
 
-a {
-    text-decoration: none; /* Quita el subrayado de todos los enlaces */
-    color: inherit;        /* Hace que el enlace use el color de su contenedor */
-}
-
-.nav__link {
-    /* Aseguramos que el enlace se vea blanco y limpio */
-    color: var(--text-light);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav__link:hover {
-    color: var(--primary-color); /* El dorado al pasar el ratón */
-}
-
-/* Clase de utilidad para centrar el contenido en la pantalla */
+/* --- 3. UTILIDADES --- */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
-/* HEADER & NAV */
+.section {
+    padding: 6rem 0 2rem; /* Más espacio arriba para que no choque con el header */
+}
+
+.section__title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* --- 4. HEADER & NAV --- */
 .header {
     width: 100%;
-    background-color: var(--bg-dark);
-    position: fixed; /* Se queda arriba siempre al hacer scroll */
+    background-color: rgba(18, 18, 18, 0.95); /* Un poco de transparencia */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 100; /* Para que este siempre por encima de lo demá */
-    border-bottom: 1px solid rgb(255, 255, 255, 0.05);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav {
-    height: 80px; /* Altura fija para el menú */
+    height: 80px;
     display: flex;
-    justify-content: space-between; /* Logo a un lado, hamburguesa al otro */
+    justify-content: space-between;
     align-items: center;
 }
 
 .nav__logo {
-    color: var(--text-light);
-    text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
     font-size: 1.2rem;
 }
 
-.nav__logo span {
-    color: var(--primary-color);
-}
+.nav__logo span { color: var(--primary-color); }
 
-/* MENÚ HAMBURGUESA */
 .nav__toggle {
     display: flex;
     flex-direction: column;
@@ -92,58 +84,42 @@ a {
 }
 
 .nav__toggle-bar {
-    display: block;
     width: 25px;
     height: 2px;
     background-color: var(--text-light);
     transition: 0.3s;
 }
 
-.nav__menu {
-    display: none; /* Oculto por defecto */
-}
+.nav__menu { display: none; }
 
-/* HERO SECTION */
+/* --- 5. HERO SECTION --- */
 .hero {
-    height: 100vh; /* Ocupa todo el alto de la pantalla */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                 url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
+    align-items: center;
     text-align: center;
-}
-
-.hero__container {
-    width: 100%;
 }
 
 .hero__subtitle {
     color: var(--primary-color);
-    font-size: 1rem;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
 .hero__title {
     font-family: var(--font-title);
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Tamaño fluido según pantalla */
     margin-bottom: 1.5rem;
-    line-height: 1.2;
 }
 
-.hero__description {
-    margin-bottom: 2.5rem;
-    color: var(--text-muted);
-}
-
-/* Botón reutilizable */
 .button {
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--bg-dark);
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.3s;
@@ -155,107 +131,130 @@ a {
     transform: translateY(-3px);
 }
 
-/* ESTILOS REUTILIZABLES */
-.section {
-    padding: 5rem 0 2rem;
-}
-
-.section__title {
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* ABOUT */
+/* --- 6. ABOUT --- */
 .about__container {
     display: grid;
-    gap: 2.5rem;
+    gap: 3rem;
+    align-items: center;
 }
 
 .about__description {
     margin-bottom: 1.5rem;
     color: var(--text-muted);
+    font-size: 1.1rem;
 }
 
-.about__img {
+.about__img img {
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* ESTILOS PARA EL MOVIL PARA CUANDO ESTE DESPLEGADO */
+/* --- 7. MEDIA QUERIES (RESPONSIVE) --- */
+
+/* MÓVIL DESPLEGADO */
 @media (max-width: 768px) {
     .nav__menu {
-        display: block; /* Lo volvemos a mostrar*/ 
+        display: block;
         position: fixed;
-        top: 80px; /* Justo debajo del header */
-        left: -100%;/* Lo sacamos de la pantalla por la izquierda */
+        top: 80px;
+        left: -100%;
         background-color: var(--bg-dark);
         width: 100%;
         height: 100vh;
         padding: 40px;
-        transition: all 0.5s ease; /* Animación suave */
-        list-style: none;
+        transition: 0.5s;
     }
 
-    .nav__item {
-        margin-bottom: 2rem;
-    }
+    .nav__item { margin-bottom: 2.5rem; }
+    .nav__link { font-size: 1.5rem; }
 
-    .nav__link {
-        color: var(--text-light);
-        text-decoration: none;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
-
-    /* Cuando el checkbox esté marcado, el menú entra en la pantalla */
-    .nav__check:checked ~ .header .nav__menu {
-        left: 0;
-    }
+    .nav__check:checked ~ .header .nav__menu { left: 0; }
 }
 
-/* DESKTOP STYLE */
+/* DESKTOP (General) */
 @media (min-width: 769px) {
-    /* Escondemos el botón de 3 rayitas porque en PC no se usa */
-    .nav__toggle {
-        display: none;
-    }
-
-    /* Mostramos el menú y lo ponemos en horizontal */
+    .nav__toggle { display: none; }
+    
     .nav__menu {
-        display: flex; 
-        gap: 2rem;
-        position: static; /* Quita el fixed del móvil */
-        width: auto;
-        height: auto;
-        background: none;
-        padding: 0;
-    }
-
-    .nav__item {
-        margin-bottom: 0;
+        display: flex;
+        gap: 3rem;
     }
 
     .nav__link {
-        font-size: 1rem;
-        transition: color 0.3s;
+        font-size: 0.9rem;
+        transition: 0.3s;
     }
 
-    .nav__link:hover {
-        color: var(--primary-color); /* El toque dorado al pasar el ratón */
+    .nav__link:hover { color: var(--primary-color); }
+
+    /* AJUSTES ESPECÍFICOS ABOUT EN DESKTOP */
+    .about__container {
+        grid-template-columns: 1.1fr 0.9fr; /* Texto más ancho que imagen */
+        gap: 5rem;
+    }
+
+    .about__data { text-align: left; }
+    .section__title { text-align: left; }
+
+    .about__img img {
+        max-width: 450px;
+        margin: 0 auto;
+        border: 1px solid var(--primary-color);
+        padding: 12px;
+        background-color: #1a1a1a;
     }
 }
 
-/* DESKTOP ABOUT */
-@media (min-width: 769px) {
-    .about__container {
-        grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
-        align-items: center;
-    }
+/* --- MENU SECTION --- */
+.menu__container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+}
 
-    .section__title {
-        text-align: left; /* Título a la izquierda en PC */
+.menu__card {
+    background-color: #1a1a1a;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.4s;
+}
+
+.menu__card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.menu__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.menu__name {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.menu__price {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.menu__detail {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Responsivo para el Menú */
+@media (min-width: 769px) {
+    .menu__container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
     }
 }
