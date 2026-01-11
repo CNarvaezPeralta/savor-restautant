@@ -258,3 +258,49 @@ img {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
     }
 }
+
+/* --- CONTACT --- */
+.contact__container {
+    display: grid;
+    gap: 3rem;
+}
+
+.contact__subtitle {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact__text {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.contact__form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+}
+
+.contact__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* --- RESPONSIVE CONTACT --- */
+@media (min-width: 769px) {
+    .contact__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+    }
+}
