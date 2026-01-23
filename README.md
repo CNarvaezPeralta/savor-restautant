@@ -1,59 +1,56 @@
-# Savor & Light - Experiencia Gourmet
+# 🍽️ Savor & Light – Experiencia Gourmet
 
-Bienvenido al repositorio de **Savor & Light**, una landing page diseñada para un restaurante de alta cocina que fusiona elegancia y sabor.
+🔗 **Demo en vivo:** [Savor & Light](https://savor-restaurant-chef.vercel.app/)
 
-## 📋 Descripción
+Este proyecto es una landing page de alta fidelidad diseñada para un restaurante de alta cocina. El objetivo principal fue crear una experiencia visual elegante y totalmente adaptativa que refleje la identidad de una marca gourmet.
 
-Este proyecto es una página web estática y responsive que presenta la identidad, historia y oferta gastronómica de "Savor & Light". Diseñada con un enfoque adaptable, ofrece una experiencia de usuario fluida y visualmente atractiva, destacando la calidad y el ambiente del restaurante.
+⚠️ **Nota:** Este es un proyecto demostrativo desarrollado con fines educativos para mi portfolio profesional.
 
-## ✨ Características
+## 🚀 Funcionalidades Clave
 
--   **Diseño Responsivo:** Adaptable a dispositivos móviles, tablets y escritorio.
--   **Navegación Intuitiva:** Menú de navegación con enlaces de anclaje a las diferentes secciones y menú hamburguesa para dispositivos móviles.
--   **Secciones Informativas:**
-    -   **Inicio (Hero):** Banner principal con título y llamada a la acción.
-    -   **Nosotros:** Presentación de la historia y filosofía del restaurante.
-    -   **Carta:** Muestra interactiva de platos destacados con precios y descripciones.
-    -   **Contacto:** Información esencial (dirección, horarios, teléfono) y formulario de contacto.
--   **Estética Visual:** Uso de tipografías elegantes (Playfair Display y Poppins) e imágenes de alta calidad que evocan la experiencia gourmet.
+* **Diseño Mobile First:** Arquitectura responsiva optimizada para una visualización perfecta en móviles, tablets y escritorio.
+* **Navegación Fluida:** Menú interactivo con enlaces de anclaje (smooth scroll) y menú hamburguesa funcional para dispositivos táctiles.
+* **Carta Interactiva:** Presentación organizada de la oferta gastronómica con un diseño limpio y sugerente.
+* **Arquitectura Semántica:** Uso de HTML5 avanzado para garantizar accesibilidad y un mejor posicionamiento (SEO) estructural.
+* **Estética de Alta Fidelidad:** Implementación de tipografías premium y recursos visuales optimizados para el rendimiento web.
 
-## 🛠️ Tecnologías Usadas
+## 🛠️ Stack Tecnológico
 
--   **HTML5:** Para la estructura semántica y accesible del contenido.
--   **CSS3:** Para el diseño, maquetación (Flexbox/Grid) y estilos visuales.
--   **JavaScript (Vanilla):** Para la interactividad, específicamente en el manejo del menú de navegación móvil.
--   **Google Fonts:** Integración de fuentes web para una tipografía distintiva.
+* **HTML5** (Estructura semántica y accesible)
+* **CSS3** (Layouts avanzados con Flexbox y Grid)
+* **JavaScript Vanilla** (Interactividad y lógica de navegación)
+* **Google Fonts** (Playfair Display y Poppins)
+* **Vercel** (Despliegue y hosting)
 
-## 🚀 Instalación y Uso
-
-Este es un proyecto estático, por lo que no requiere una instalación compleja de dependencias o servidores.
-
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone https://github.com/CNarvaezPeralta/savor-restaurant.git
-    ```
-
-2.  **Ejecutar el proyecto:**
-    Simplemente navega a la carpeta del proyecto clonado y abre el archivo `index.html` haciendo doble clic en él o arrastrándolo a tu navegador web favorito.
-
-    Alternativamente, si usas VS Code, puedes usar la extensión **Live Server** para ver los cambios en tiempo real.
-
-## 📂 Estructura del Proyecto
+## 📦 Estructura del Proyecto
 
 ```text
 /
 ├── assets/
-│   ├── img/          # Imágenes y recursos gráficos
+│   ├── img/          # Imágenes y recursos gráficos optimizados
 │   └── styles/       # Hoja de estilos principal (styles.css)
 ├── js/
-│   └── main.js       # Script principal para la lógica del frontend
-├── index.html        # Archivo principal de la página
+│   └── main.js       # Lógica de navegación y menú móvil
+├── index.html        # Estructura principal de la página
 └── README.md         # Documentación del proyecto
 ```
 
-## ✒️ Autores
+## ⚙️ Instalación y Uso
+Clonar el repositorio:
 
--   **CNarvaezPeralta** - *Desarrollo y Diseño*
+Bash
 
----
-© 2024 Savor & Light. Todos los derechos reservados.
+git clone [https://github.com/CNarvaezPeralta/savor-restaurant.git](https://github.com/CNarvaezPeralta/savor-restaurant.git)
+Ejecutar el proyecto: Este es un proyecto estático, por lo que no requiere instalación de dependencias. Simplemente abre el archivo index.html en tu navegador o utiliza la extensión Live Server en VS Code para previsualizar los cambios en tiempo real.
+
+## 🧠 Desafíos y Aprendizajes
+Este proyecto fue fundamental para perfeccionar mis bases de desarrollo web:
+
+Maquetación Precisa: Dominar el uso de Grid y Flexbox para lograr diseños complejos sin depender de frameworks externos.
+
+Rendimiento: Optimizar el uso de imágenes y fuentes para asegurar una carga rápida.
+
+Organización: Implementar una estructura de carpetas limpia y escalable para proyectos de frontend tradicional.
+
+## 👤 Autor
+Carlos Narváez - Frontend Developer Junior
